@@ -15,18 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OulerBaseDataStructure.h">
+    <ClInclude Include="EulerBaseDataStructure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OulerOperation.h">
+    <ClInclude Include="EulerOperation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OulerOperationUtility.h">
+    <ClInclude Include="EulerOperationUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loadShader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ouler.cpp">
+    <ClCompile Include="Euler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawUtility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

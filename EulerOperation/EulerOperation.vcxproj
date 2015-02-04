@@ -41,6 +41,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>../lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -56,6 +58,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -76,12 +79,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="OulerBaseDataStructure.h" />
-    <ClInclude Include="OulerOperation.h" />
-    <ClInclude Include="OulerOperationUtility.h" />
+    <ClInclude Include="EulerBaseDataStructure.h" />
+    <ClInclude Include="EulerOperation.h" />
+    <ClInclude Include="EulerOperationUtility.h" />
+    <ClInclude Include="loadShader.h" />
+    <ClInclude Include="SceneDisplay.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ouler.cpp" />
+    <ClCompile Include="Euler.cpp" />
+    <ClCompile Include="SceneDisplay.cpp" />
+    <ClCompile Include="DrawUtility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
